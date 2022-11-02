@@ -1,0 +1,69 @@
+.preloader {
+  @include zero;
+  position: fixed;
+  background-color: var(--bg-color);
+  z-index: 100000;
+  padding-top: 390px;
+}
+
+.preloader__row {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+}
+
+.preloader-block {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.preloader__item {
+  @include blur;
+  position: absolute;
+  background-color: #c8c8d4c1;
+  border-radius: 100%;
+  z-index: 0 !important;
+  animation: preloader-bounce 2s infinite cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  &:first-child {
+    width: 80px;
+    height: 80px;
+    margin-top: 15px;
+  }
+  &:last-child {
+    z-index: 1 !important;
+    width: 110px;
+    height: 110px;
+    background-color: #45454ca4;
+    @include blur;
+  }
+}
+
+.preloader-logo {
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+@keyframes preloader-bounce {
+  0%,
+  100% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+.loaded_hiding .preloader {
+  transition: 0.5s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: block;
+}

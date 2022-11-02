@@ -1,0 +1,69 @@
+:root {
+  --bg-color: #26262c;
+  --text-color: #f2f2f2;
+  --black-color: #000;
+  --hover: #6a6376;
+  --border-radius: 20px;
+  --border-radius-50: 50%;
+}
+
+@mixin zero {
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@mixin blur {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+@mixin fade-in {
+  @-webkit-keyframes fade-in {
+    0% {
+      opacity: 0.1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @-moz-keyframes fade-in {
+    0% {
+      opacity: 0.1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @-o-keyframes fade-in {
+    0% {
+      opacity: 0.1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0.1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin fade-animation {
+  @include fade-in;
+  -webkit-animation: fade-in 2000ms ease-in-out;
+  -moz-animation: fade-in 2000ms ease-in-out;
+  -o-animation: fade-in 2000ms ease-in-out;
+}
+
+@mixin fade-animation-img {
+  @include fade-in;
+  -webkit-animation: fade-in 2000ms ease-in-out;
+  -moz-animation: fade-in 2000ms ease-in-out;
+  -o-animation: fade-in 2000ms ease-in-out;
+}

@@ -1,0 +1,25 @@
+@import "normalize";
+@import "root";
+@import "App";
+@import "Header";
+@import "Main";
+@import "Footer";
+@import "Preloader";
+@import "../fonts/fonts.css";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--bg-color);
+}
